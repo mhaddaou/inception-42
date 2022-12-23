@@ -1,0 +1,35 @@
+version: '3'
+services:
+  mariadb:
+    # image: mariadb
+    container_name: mariadb
+    build: ./requirements/mariadb/
+    # env_file: .env
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: password
+    ports:
+      - 3306:3306
+    volumes:
+      - my_database:/var/lib/mysql
+  # adminer:
+  #   image: adminer
+  #   restart: always
+  #   ports:
+  #     - 8080:8080
+  nginx:
+    # image: nginx
+    container_name: nginx
+    build : ./requirements/nginx/
+    restart: always
+    ports:
+      - 443:443
+volumes:
+  my_database:
+    driver: local
+    driver_opts:
+      type: none
+      device: /Users/mhaddaou/my_database
+      o: bind

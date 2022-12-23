@@ -1,0 +1,5 @@
+CREATE DATABASE IF NOT EXISTS mhaddaou_db;
+CREATE USER IF NOT EXISTS 'mhaddaou'@'%' IDENTIFIED BY 'mhaddaou1337';
+GRANT ALL PRIVILEGES ON mhaddaou_db.* TO 'mhaddaou'@'%';
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'root1337';
+FLUSH PRIVILEGES;

@@ -1,0 +1,19 @@
+FROM debian:latest
+
+RUN apt-get update && \
+    apt-get install -y \
+    wget \
+    unzip \
+    mysql-client \
+    php7.3-fpm \
+    php7.3-mysql \
+    php7.3-gd \
+    php7.3-mbstring \
+    php7.3-xml 
+RUN wget https://wordpress.org/latest.tar.gz && \
+    tar xzvf latest.tar.gz && \
+    rm latest.tar.gz
+RUN cp -r wordpress/* /var/www/html/ && \
+    chown -R www-data:www-data /var/www/html/
+COPY www.conf /etc/php/7.3/fpm/pool.d/www.conf
+CMD ["php-fpm7.3"]
