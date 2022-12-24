@@ -1,19 +1,13 @@
-FROM debian:latest
+FROM debian:buster
 
 RUN apt-get update && \
     apt-get install -y \
     wget \
     unzip \
-    mysql-client \
-    php7.3-fpm \
-    php7.3-mysql \
-    php7.3-gd \
-    php7.3-mbstring \
-    php7.3-xml 
-RUN wget https://wordpress.org/latest.tar.gz && \
-    tar xzvf latest.tar.gz && \
-    rm latest.tar.gz
-RUN cp -r wordpress/* /var/www/html/ && \
-    chown -R www-data:www-data /var/www/html/
-COPY www.conf /etc/php/7.3/fpm/pool.d/www.conf
-CMD ["php-fpm7.3"]
+    curl
+RUN apt-get install -y php7.3-fpm php7.3-mysql php7.3-json php7.3-xmlrpc php7.3-curl php7.3-gd php7.3-xml php7.3-mbstring expect 
+RUN wget http://wordpress.org/latest.tar.gz
+RUN tar xfz latest.tar.gz &&  rm -rf latest.tar.gz
+RUN mv wordpress/ /var/www/html/ && cd /var/www/html/
+RUN mv /var/www/html/wordpress/* ./ && rm -rf wordpress
+RUN chmod +x /tools/script.sh

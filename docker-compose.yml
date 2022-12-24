@@ -31,5 +31,5 @@ volumes:
     driver: local
     driver_opts:
       type: none
-      device: /Users/mhaddaou/my_database
+      device: /home/psychom/Desktop/my_database/
       o: bind
