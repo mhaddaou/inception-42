@@ -6,8 +6,13 @@ RUN apt-get update && \
     unzip \
     curl
 RUN apt-get install -y php7.3-fpm php7.3-mysql php7.3-json php7.3-xmlrpc php7.3-curl php7.3-gd php7.3-xml php7.3-mbstring expect 
-RUN wget http://wordpress.org/latest.tar.gz
-RUN tar xfz latest.tar.gz &&  rm -rf latest.tar.gz
-RUN mv wordpress/ /var/www/html/ && cd /var/www/html/
-RUN mv /var/www/html/wordpress/* ./ && rm -rf wordpress
-RUN chmod +x /tools/script.sh
+RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
+RUN chmod +x wp-cli.phar 
+RUN mv wp-cli.phar /usr/local/bin/wp
+RUN mkdir -p /var/www/html/
+RUN wp core download --path=/var/www/html --allow-root
+# RUN mv script.sh /usr/src/
+
+COPY script.sh /tmp/
+EXPOSE 9000
+ENTRYPOINT [ "/bin/sh", "/tmp/script.sh" ]
