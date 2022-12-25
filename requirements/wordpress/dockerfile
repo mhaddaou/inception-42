@@ -11,8 +11,7 @@ RUN chmod +x wp-cli.phar
 RUN mv wp-cli.phar /usr/local/bin/wp
 RUN mkdir -p /var/www/html/
 RUN wp core download --path=/var/www/html --allow-root
-# RUN mv script.sh /usr/src/
-
+RUN chown -R www-data:www-data /var/www/html
 COPY script.sh /tmp/
 EXPOSE 9000
 ENTRYPOINT [ "/bin/sh", "/tmp/script.sh" ]
