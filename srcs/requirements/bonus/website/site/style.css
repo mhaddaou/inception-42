@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+ }
+
+ header{
+     background: url(images/bcb.jpg);
+     width: 100%;
+     height: 50px;
+     position: fixed;
+     z-index: 999;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 10px 100px;
+     
+ }
+ .logo{
+     text-decoration: none;
+     color: #076ef5;
+     text-transform: uppercase;
+     font-style: italic;
+     font-weight: 700;
+     font-size: 1.8em;
+ }
+ .navigation a{
+     text-decoration: none;
+     color: #6390eb;
+     font-style: italic;
+     font-size: 1.1em;
+     font-weight: 500;
+     padding-right: 50px;
+ }
+ .navigation a:hover{
+     color: #6600cc;
+ }
+ section{
+     padding: 20px 150px;
+ }
+ .main{
+     width:100%;
+     min-height: 100vh;
+     display: flex;
+     align-items: center;
+     background: url(images/itsgreat.jpg) no-repeat;
+     background-size: cover;
+     /* background-position: center; */
+     background-attachment: fixed;
+ }
+ .net{
+     text-decoration: none;
+     color:#6699ff;
+ }
+ .net:hover{
+     color:#6600cc;
+ }
+ .main h2 {
+     color:white;
+     font-size: 1.4em;
+     font-weight: 500;
+     font-style: italic;
+ }
+ .main h2 span{
+     display: inline-block;
+     color:rgb(2, 143, 224);
+     font-size: 2.4em;
+     font-weight: 400;
+     margin-top: 15px;
+ }
+ .main h3{
+     color:white;
+     font-size: 2em;
+     font-weight: 700;
+     letter-spacing: 1px;
+     margin-top: 10px;
+     margin-bottom: 30px;
+ }
+ .main-btn{
+     color:white;
+     background-color: #0a0036d0;
+     text-decoration: none;
+     font-size: 1.1em;
+     font-weight: 600;
+     display: inline-block;
+     padding: 0.9375em 2.187em;
+     letter-spacing: 1px;
+     border-radius: 15px;
+     margin-bottom: 40px;
+     transition: 0.7s ease;
+ }
+ .main-btn:hover{
+     background-color: #15c3e2;
+     transform: scale(1.1);
+ }
+ .social-icons a{
+     color:white;
+     font-size: 2em;
+     padding-right: 30px;
+ }
+ .med{
+     font-style: italic;
+     color:#1b4a53;
+     border-bottom: #15c3e2 solid;
+ }
+ .med img{
+     position: relative;
+     top:3px;
+ }
+ .bash{
+     float: left;
+     padding-right: 150px;
+ }
+ .c{
+     padding-left: 30px;
+     padding-top:9px;
+     width: 112px;
+     float: left;
+     position: relative;
+     left: 100px;
+
+ }
+ .css{
+     width: 75px;
+     position: relative;
+     left:390px;
+     padding-top: 12px;
+     float: left;
+     
+ }
+ .html{
+     float:left;
+     padding-left: 687px;
+     font-size: 80px;
+     position: relative;
+     top: -8px;
+ }
+ .content{
+     display: flex;
+     justify-content: center;
+     flex-direction: row;
+     flex-wrap: nowrap;
+ }
+ .pro{
+
+     color: #1c4a53;
+     border-bottom: #15c3e2 solid;
+     font-style: italic;
+     
+ }
+ .pro img{
+     width: 25px;
+     position: relative;
+     top:4px;
+     left:10px;
+     
+ }
+ .git{
+     color:#14182e;
+     font-style: italic;
+ }
+ .git span{
+     color: #6600cc;
+ }
+ .git a{
+     color:black;
+     font-size: 2em;
+     position:relative;
+     padding-left: 30px;
+     top:5px;
+ }
+ .card {
+    background-color: #fff;
+    width: 21.25em;
+    box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+    border-radius: 10px;
+    padding: 25px;
+    margin: 15px;
+    transition: 0.7s ease;
+}
+.card:hover {
+    transform: scale(1.1);
+}
+
+.card .icon {
+    color: #3a6cf4;
+    font-size: 8em;
+    text-align: center;
+}
+.info {
+    text-align: center;
+}
+
+.info h3{
+    color: #3a6cf4;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: 10px;
+}
+.footer {
+    background-color: #000016;
+    color: #fff;
+    padding: 2em;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-title {
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+.footer-title span {
+    color: #3a6cf4;
+}
+
+.footer .social-icons a{
+    font-size: 1.3em;
+    padding: 0 12px 0 0;
+}
+.contact{
+    padding-top: 50px;
+    color: #1c4a53;
+     border-bottom: #15c3e2 solid;
+     font-style: italic;
+
+}
+
+ @media(max-width:415px){
+     header{
+         padding:2px;
+         height: 30px;
+         background-size: 100%;
+         position: fixed;
+         z-index: 7000000000000000000;
+
+         
+     }
+     .navigation a{
+         padding-right: 2px;
+         position:relative;
+         left:-110px;
+         width: 10px;
+         font-size: 15px;
+         color:#8ac1e0
+     }
+     .logo{
+         font-size: 15px;
+     }
+     .main{
+         padding: 1px 40px;
+         font-size: 10px;
+         position: relative;
+         background-position: auto;
+         background-size: 505px 1000px;         
+     }
+     .med{
+         position:relative;
+         left: -140px;
+         /* padding-right: 500px; */
+         float: left;
+         padding-right:200px ;
+         
+     }
+     .med img{
+         top:-35px;
+         left: 100px;
+
+     }
+     .bash{
+         padding-left: 350px;
+         padding-top: 100px;
+
+     }
+     .c{
+         position:relative;
+         padding-top:110px;
+         left: -60px;
+     }
+     .css{
+         position:relative;
+         left:-350px;
+         top:250px;
+     }
+     .html{
+         position:relative;
+         left:-890px;
+         top: 245px;
+     }
+     .pro{
+         position: relative;
+         padding-top: 200px;
+         left: -130px;
+         padding-right: 290px;
+     }
+     .pro img{
+         position:relative;
+         top:-30px;
+         left: 140px;
+     }
+     .project h4{
+         position: relative;
+         left: -130px;
+         font-weight: 10px;
+     }
+     .project h4 span{
+         position: relative;
+         left:120px;
+         top:-85px;
+     }
+     .git a{
+         position: relative;
+         top:-121px;
+         left: 150px;
+
+     }
+ }
+ @media (max-width:641px){
+    body{
+        font-size: 12px;
+    }
+
+    .main-content h2{
+        font-size: 0.8em;
+    }
+
+    .main-content h3{
+        font-size: 1.4em;
+    }
+}
+
+@media (max-width:300px){
+    body{
+        font-size: 10px;
+     
+    }
+}
+ 

@@ -8,18 +8,24 @@ networks:
 
 
 volumes:
-    mariadb_data:
-        driver: local
-        driver_opts:
-            type: none
-            o: bind
-            device: /home/psychom/Desktop/my_database
     wordpress_data:
         driver: local
         driver_opts:
             type: none
             o: bind
             device: /home/psychom/Desktop/wordpress
+    mariadb_data:
+        driver: local
+        driver_opts:
+            type: none
+            o: bind
+            device: /home/psychom/Desktop/my_database
+    adminer_data:
+        driver: local
+        driver_opts:
+            type: none
+            o: bind
+            device: /home/psychom/Desktop/adminer
 
 services:
   mariadb:
@@ -40,6 +46,16 @@ services:
       - mariadb_data:/home/psychom/Desktop/my_database
     restart: unless-stopped
 
+  redis:
+    build: ./requirements/bonus/redis
+    container_name: REDIS
+    image: redis
+    networks:
+      - my_network
+    ports:
+      - 6379:6379
+    restart: on-failure
+
   wordpress:
     build:
       context: requirements/wordpress
@@ -51,7 +67,8 @@ services:
     volumes:
       - wordpress_data:/var/www/wordpress:rw
     depends_on:
-       - mariadb
+      - mariadb
+      - redis
     env_file:
       - .env
     restart: unless-stopped
@@ -63,11 +80,33 @@ services:
     image: nginx
     container_name: NGINX
     depends_on:
-     - wordpress
+      - wordpress
     ports:
       - "443:443"
     networks:
       - my_network
     volumes:
-      - wordpress_data:/var/www/wordpress:ro
+      - wordpress_data:/var/www/wordpress
     restart: unless-stopped
+
+  adminer:
+    build: ./requirements/bonus/adminer
+    container_name: ADMINER
+    image: adminer
+    networks:
+    - my_network
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mariadb
+    restart: on-failure
+    
+  website:
+    build: ./requirements/bonus/website
+    container_name: WEBSITE
+    image: website
+    networks:
+      - my_network
+    ports:
+      - 81:81
+    restart: on-failure
