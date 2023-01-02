@@ -21,5 +21,6 @@ RUN chmod +x script.sh
 COPY ./conf/50-server.cnf /etc/mysql/mariadb.conf.d/50-server.cnf
 
 RUN bash ./script.sh
+#If the daemon crashes or exits for any reason, mysqld_safe will automatically restart it.
 
 CMD exec mysqld_safe

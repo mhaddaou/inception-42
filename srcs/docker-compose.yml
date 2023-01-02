@@ -13,19 +13,19 @@ volumes:
         driver_opts:
             type: none
             o: bind
-            device: /home/psychom/Desktop/wordpress
+            device: /home/psychom/data/wp/
     mariadb_data:
         driver: local
         driver_opts:
             type: none
             o: bind
-            device: /home/psychom/Desktop/my_database
+            device: /home/psychom/data/db/
     adminer_data:
         driver: local
         driver_opts:
             type: none
             o: bind
-            device: /home/psychom/Desktop/adminer
+            device: /home/psychom/data/adm/
 
 services:
   mariadb:
@@ -43,7 +43,7 @@ services:
     networks:
       - my_network
     volumes:
-      - mariadb_data:/home/psychom/Desktop/my_database
+      - mariadb_data:/var/lib/mysql
     restart: unless-stopped
 
   redis:
