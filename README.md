@@ -138,5 +138,5 @@ The nginx command is the command-line utility for the Nginx web server. It is us
 
 The `-g` option is used to specify global directives that should be applied to the main Nginx configuration file. The `daemon off;` directive specifies that Nginx should run in the foreground and not as a daemon.<br>
 
-Now let's configue the file nginx.conf first step make a directory called `conf` and inside it make a file called nginx.conf
+Now let's configue the file `nginx.conf` first step make a directory called `conf` and inside it make a file called `nginx.conf`
 then open the file
