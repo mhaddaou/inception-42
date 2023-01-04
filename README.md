@@ -132,3 +132,8 @@ The sites-available directory is typically used to store configuration files for
 
 By copying the nginx.conf file to this location, you are effectively replacing the default configuration for Nginx with the new configuration contained in the nginx.conf file.<br>
 `CMD` is a directive that specifies the command that should be run when the container is started. It is used to specify the default command that should be run when the container is started, and it can be overridden by the command specified when the container is run.<br>
+`CMD ["nginx", "-g", "daemon off;"]` This command specifies the command that should be run when the container is started. It runs the nginx command with the arguments -g, daemon off;.
+
+The nginx command is the command-line utility for the Nginx web server. It is used to start, stop, and reload the Nginx web server, as well as to perform other tasks related to the Nginx web server.
+
+The -g option is used to specify global directives that should be applied to the main Nginx configuration file. The daemon off; directive specifies that Nginx should run in the foreground and not as a daemon.
