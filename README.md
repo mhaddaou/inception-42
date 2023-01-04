@@ -78,3 +78,5 @@ first step make a file called Dockerfile then open it and write inside it.<br>
 ```console
 FROM debian:buster
 ```
+
+FROM is a Dockerfile instruction that specifies the base image to use for building the Docker image. In this case, the instruction FROM debian:buster specifies that the Docker image should be based on the debian base image, specifically the buster version<br>
