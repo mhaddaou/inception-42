@@ -81,3 +81,12 @@ FROM debian:buster
 
 FROM is a Dockerfile instruction that specifies the base image to use for building the Docker image. In this case, <br>
 the instruction <h5>FROM debian:buster</h5> specifies that the Docker image should be based on the debian base image, specifically the buster version<br>
+
+then add 
+```console
+    LABEL maintainer="mhaddaou@student.1337.ma"
+```
+
+LABEL is a Dockerfile instruction that allows you to add metadata to your Docker image. The metadata is stored in the form of key-value pairs and can be used to provide information about the image, such as the maintainer, version, and other details.<br>
+
+In this case, the instruction LABEL maintainer="mhaddaou@student.1337.ma" adds a maintainer label to the image with the value mhaddaou@student.1337.ma. This label can be used to specify the email address of the maintainer of the image.<br>
