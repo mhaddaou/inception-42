@@ -124,4 +124,11 @@ This command creates a self-signed SSL/TLS certificate and private key, and writ
 then add 
 ```console 
 COPY ./conf/nginx.conf /etc/nginx/sites-available/default
+CMD ["nginx", "-g", "daemon off;"]
 ```
+`COPY ./conf/nginx.conf /etc/nginx/sites-available/default` This command copies the file nginx.conf from the conf directory in the current directory to the location /etc/nginx/sites-available/default. The file nginx.conf is typically a configuration file for the Nginx web server. When you copy it to the location /etc/nginx/sites-available/default, it will be used as the default configuration file for Nginx.<br>
+
+The sites-available directory is typically used to store configuration files for virtual host configurations in Nginx. A virtual host is a way to host multiple websites on a single machine. The default file in the sites-available directory is usually used as a catch-all configuration for requests that do not match any of the other virtual host configurations.<br>
+
+By copying the nginx.conf file to this location, you are effectively replacing the default configuration for Nginx with the new configuration contained in the nginx.conf file.<br>
+`CMD` is a directive that specifies the command that should be run when the container is started. It is used to specify the default command that should be run when the container is started, and it can be overridden by the command specified when the container is run.<br>
