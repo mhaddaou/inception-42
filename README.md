@@ -154,3 +154,4 @@ then open the file and write inside it<br>
     ssl_protocols TLSv1.3;
     }
 ```
+`listen 443 ssl;` tells the web server to listen on port 443 for HTTPS requests using SSL/TLS. This is the default port for HTTPS traffic.
