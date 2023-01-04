@@ -54,3 +54,18 @@ To build a Docker image, you create a Dockerfile and use the docker build comman
 
 # volumes
 In Docker, a volume is a persistent storage location that is stored outside of a container's union file system and is used to store data that needs to persist beyond the life of a single container. Volumes can be shared and reused among containers, and they are stored in a part of the host file system that is managed by Docker.<br>
+
+# Network
+
+In Docker, a network is a virtual network that allows containers to communicate with each other and with the host system. Docker supports several types of networks, including bridge, host, and overlay networks.<br>
+
+### Bridge Network
+
+A bridge network is a virtual network that is created automatically when you install Docker. It allows containers on the same host to communicate with each other and with the host system. By default, all containers are connected to the bridge network, and you can use it to connect containers together and to the host system.<br>
+### Host Network
+
+A host network is a network that uses the host system's network stack and bypasses the virtual network entirely. This means that the containers on the host network are directly connected to the host system and are not isolated from it.<br>
+
+### Overlay Network
+
+An overlay network is a virtual network that spans multiple Docker hosts and allows containers on different hosts to communicate with each other. Overlay networks are used in Docker Swarm mode to allow containers to communicate across multiple nodes in a cluster.<br>
