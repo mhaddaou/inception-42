@@ -24,4 +24,17 @@ By using containers, developers can be sure that their applications will run con
 
 Docker is widely used in the development and deployment of modern applications and microservices. It allows developers to build, ship, and run their applications in a container, which can be easily moved between different systems. This makes it easier to scale and manage applications, and to deploy updates and new features quickly and reliably.<br>
 
+# Installation
+
+### Linux
+
+```console
+    sudo apt update
+
+    sudo apt install -y docker.io
+    
+    sudo systemctl enable docker --now
+    
+    docker -v
+```
 
