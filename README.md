@@ -120,3 +120,8 @@ This command generates a self-signed SSL/TLS certificate. It does the following:
 `-sha256` specifies that the SHA-256 message digest algorithm should be used to sign the certificate<br>
 `-subj` "/CN=mhaddaou.42.fr": specifies the subject of the certificate in the form of a Distinguished Name (DN). The /CN attribute specifies the Common Name (CN) of the certificate, which should be the domain name that the certificate will be used for. In this case, the certificate will be used for the domain mhaddaou.42.fr<br>
 This command creates a self-signed SSL/TLS certificate and private key, and writes them to the specified files. The certificate is valid for 365 days and uses the SHA-256 message digest algorithm to sign it. The private key is 4096 bits long and is not encrypted. The certificate is intended to be used for the domain mhaddaou.42.fr.<br>
+
+then add 
+```console 
+COPY ./conf/nginx.conf /etc/nginx/sites-available/default
+```
