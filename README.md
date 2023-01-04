@@ -101,3 +101,4 @@ then add to our file
 `-y` : flag tells the package manager to assume that the user wants to install the packages and dependencies without prompting for confirmation.
 
 `NGINX` is open source software for web serving, reverse proxying, caching, load balancing, media streaming, and more. It started out as a web server designed for maximum performance and stability. In addition to its HTTP server capabilities, NGINX can also function as a proxy server for email (IMAP, POP3, and SMTP) and a reverse proxy and load balancer for HTTP, TCP, and UDP servers.
+`penssl` is an open-source implementation of the Secure Sockets Layer (SSL) and Transport Layer Security (TLS) protocols. It is a widely used toolkit for implementing cryptographic protocols, such as SSL and TLS, in applications that need secure communication over networks.
