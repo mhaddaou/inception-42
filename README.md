@@ -42,6 +42,9 @@ Docker is widely used in the development and deployment of modern applications a
 A container is a standardized unit of software that packages up code and all its dependencies so the application runs quickly and reliably from one computing environment to another. Containers are a way to package and distribute software in a portable and isolated environment, so that it can be run on any system that has the necessary support for containers.<br>
 
 Containers are similar to virtual machines, but they do not include the entire operating system and hardware virtualization layers. This makes them more lightweight and efficient, and allows them to be more easily moved between systems.<br>
+# diference between container and virtual machine
+containers are lightweight and efficient, and they allow multiple applications to share the same host operating system and kernel. VMs, on the other hand, provide a higher level of isolation, but they are more resource-intensive and require their own copy of the operating system and kernel.<br>
+
 
 # what is a Dockerfile
 

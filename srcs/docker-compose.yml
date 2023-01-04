@@ -110,3 +110,20 @@ services:
     ports:
       - 81:81
     restart: on-failure
+
+  cadvisor:
+    build: ./requirements/bonus/cadvisor
+    container_name: CADVISOR
+    image: cadvisor
+    networks:
+      - my_network
+    ports:
+      - 2000:2000
+    volumes:
+      - "/:/rootfs:ro"
+      - "/var/run:/var/run:rw"
+      - "/sys:/sys:ro"
+      - "/var/lib/docker/:/var/lib/docker:ro"
+      - "/dev/kmsg:/dev/kmsg"
+    privileged: true
+    restart: on-failure
