@@ -79,7 +79,7 @@ first step make a file called Dockerfile then open it and write inside it.<br>
 FROM debian:buster
 ```
 
-FROM is a Dockerfile instruction that specifies the base image to use for building the Docker image. In this case, <br>
+`FROM` : is a Dockerfile instruction that specifies the base image to use for building the Docker image. In this case, <br>
 the instruction <h5>FROM debian:buster</h5> specifies that the Docker image should be based on the debian base image, specifically the buster version<br>
 
 then add 
@@ -87,7 +87,7 @@ then add
     LABEL maintainer="mhaddaou@student.1337.ma"
 ```
 
-LABEL is a Dockerfile instruction that allows you to add metadata to your Docker image. The metadata is stored in the form of key-value pairs and can be used to provide information about the image, such as the maintainer, version, and other details.<br>
+`LABEL` : is a Dockerfile instruction that allows you to add metadata to your Docker image. The metadata is stored in the form of key-value pairs and can be used to provide information about the image, such as the maintainer, version, and other details.<br>
 
 In this case, the instruction LABEL maintainer="mhaddaou@student.1337.ma" adds a maintainer label to the image with the value mhaddaou@student.1337.ma. This label can be used to specify the email address of the maintainer of the image.<br>
 then add to our file
@@ -97,7 +97,7 @@ then add to our file
     RUN apt-get install nginx -y
     RUN apt-get install openssl -y
 ```
-RUN is a Dockerfile instruction that is used to execute commands during the build process of a Docker image<br>
-`y `flag tells the package manager to assume that the user wants to install the packages and dependencies without prompting for confirmation.
+`RUN` : is a Dockerfile instruction that is used to execute commands during the build process of a Docker image<br>
+`y` : flag tells the package manager to assume that the user wants to install the packages and dependencies without prompting for confirmation.
 
 
