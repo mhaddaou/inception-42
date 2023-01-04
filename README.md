@@ -97,5 +97,7 @@ then add to our file
     RUN apt-get install nginx -y
     RUN apt-get install openssl -y
 ```
+RUN is a Dockerfile instruction that is used to execute commands during the build process of a Docker image<br>
+`y `flag tells the package manager to assume that the user wants to install the packages and dependencies without prompting for confirmation.
 
 
