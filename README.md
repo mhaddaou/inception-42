@@ -100,4 +100,4 @@ then add to our file
 `RUN` : is a Dockerfile instruction that is used to execute commands during the build process of a Docker image<br>
 `-y` : flag tells the package manager to assume that the user wants to install the packages and dependencies without prompting for confirmation.
 
-
+`NGINX`  is a popular open-source web server that is known for its high performance, reliability, and flexibility. It is often used as a reverse proxy, load balancer, and HTTP cache
