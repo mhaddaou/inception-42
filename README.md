@@ -69,3 +69,12 @@ A host network is a network that uses the host system's network stack and bypass
 ### Overlay Network
 
 An overlay network is a virtual network that spans multiple Docker hosts and allows containers on different hosts to communicate with each other. Overlay networks are used in Docker Swarm mode to allow containers to communicate across multiple nodes in a cluster.<br>
+
+
+# let's set up a Docker container that contains NGINX with TLSv1.3 only.
+
+first step make a file called Dockerfile then open it and write inside it.<br>
+
+```console
+FROM debian:buster
+```
