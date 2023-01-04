@@ -80,4 +80,4 @@ FROM debian:buster
 ```
 
 FROM is a Dockerfile instruction that specifies the base image to use for building the Docker image. In this case, <br>
-the instruction <h3>FROM debian:buster</h3> specifies that the Docker image should be based on the debian base image, specifically the buster version<br>
+the instruction <h1>FROM debian:buster</h1> specifies that the Docker image should be based on the debian base image, specifically the buster version<br>
