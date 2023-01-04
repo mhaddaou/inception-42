@@ -43,3 +43,9 @@ A container is a standardized unit of software that packages up code and all its
 
 Containers are similar to virtual machines, but they do not include the entire operating system and hardware virtualization layers. This makes them more lightweight and efficient, and allows them to be more easily moved between systems.<br>
 
+# what is a Dockerfile
+
+A Dockerfile is a text file that contains instructions for building a Docker image. It is used to automate the process of building a Docker image, and it specifies all the steps required to create a Docker image for an application, including installing required dependencies, copying application files, and setting up any necessary configuration.<br>
+
+To build a Docker image, you create a Dockerfile and use the docker build command to build the image. The docker build command reads the instructions in the Dockerfile and executes them, creating a new Docker image. This image can then be used to create Docker containers, which are lightweight and portable environments that contain all the dependencies and code needed to run an application.<br>
+
