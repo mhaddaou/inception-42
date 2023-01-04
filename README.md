@@ -154,4 +154,5 @@ then open the file and write inside it<br>
     ssl_protocols TLSv1.3;
     }
 ```
-`listen 443 ssl;` tells the web server to listen on port 443 for HTTPS requests using SSL/TLS. This is the default port for HTTPS traffic.
+`listen 443 ssl;` tells the web server to listen on port 443 for HTTPS requests using SSL/TLS. This is the default port for HTTPS traffic.<br>
+`[::]:443` syntax specifies that the web server should listen on all available IPv6 addresses on port 443. This is equivalent to specifying 0.0.0.0:443 for IPv4 addresses.
