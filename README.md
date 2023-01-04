@@ -139,4 +139,18 @@ The nginx command is the command-line utility for the Nginx web server. It is us
 The `-g` option is used to specify global directives that should be applied to the main Nginx configuration file. The `daemon off;` directive specifies that Nginx should run in the foreground and not as a daemon.<br>
 
 Now let's configue the file `nginx.conf` first step make a directory called `conf` and inside it make a file called `nginx.conf`
-then open the file
+then open the file and write inside it<br>
+
+```console 
+ server {
+    listen 443 ssl;
+    listen [::]:443 ssl;
+
+    server_name mhaddaou.42.fr www.mhaddaou.42.fr;
+
+    ssl_certificate /etc/ssl/certs/mhaddaou.crt;
+    ssl_certificate_key /etc/ssl/private/mhaddaou.key;
+    
+    ssl_protocols TLSv1.3;
+    }
+    ```
