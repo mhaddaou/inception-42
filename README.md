@@ -52,3 +52,5 @@ A Dockerfile is a text file that contains instructions for building a Docker ima
 
 To build a Docker image, you create a Dockerfile and use the docker build command to build the image. The docker build command reads the instructions in the Dockerfile and executes them, creating a new Docker image. This image can then be used to create Docker containers, which are lightweight and portable environments that contain all the dependencies and code needed to run an application.<br>
 
+# volumes
+In Docker, a volume is a persistent storage location that is stored outside of a container's union file system and is used to store data that needs to persist beyond the life of a single container. Volumes can be shared and reused among containers, and they are stored in a part of the host file system that is managed by Docker.<br>
