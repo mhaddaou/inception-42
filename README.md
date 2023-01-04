@@ -136,4 +136,4 @@ By copying the nginx.conf file to this location, you are effectively replacing t
 
 The nginx command is the command-line utility for the Nginx web server. It is used to start, stop, and reload the Nginx web server, as well as to perform other tasks related to the Nginx web server.
 
-The `-g` option is used to specify global directives that should be applied to the main Nginx configuration file. The `daemon off` directive specifies that Nginx should run in the foreground and not as a daemon.
+The `-g` option is used to specify global directives that should be applied to the main Nginx configuration file. The `daemon off;` directive specifies that Nginx should run in the foreground and not as a daemon.
