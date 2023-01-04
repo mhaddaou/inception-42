@@ -108,3 +108,15 @@ then add this command
     -keyout /etc/ssl/private/mhaddaou.key \
     -out /etc/ssl/certs/mhaddaou.crt -sha256 -subj "/CN=mhaddaou.42.fr"
 ```
+This command generates a self-signed SSL/TLS certificate. It does the following:
+
+`req` creates and processes certificate requests<br>
+`-x509` specifies that a self-signed certificate should be created<br>
+`-days 365` specifies that the certificate will be valid for 365 days<br>
+`-nodes` specifies that the private key should not be encrypted<br>
+`-newkey` rsa:4096: creates a new 4096-bit RSA key<br>
+`-keyout /etc/ssl/private/mhaddaou.key` specifies the file to which the private key should be written<br>
+`-out /etc/ssl/certs/mhaddaou.crt` specifies the file to which the certificate should be written<br>
+`-sha256` specifies that the SHA-256 message digest algorithm should be used to sign the certificate<br>
+`-subj` "/CN=mhaddaou.42.fr": specifies the subject of the certificate in the form of a Distinguished Name (DN). The /CN attribute specifies the Common Name (CN) of the certificate, which should be the domain name that the certificate will be used for. In this case, the certificate will be used for the domain mhaddaou.42.fr<br>
+This command creates a self-signed SSL/TLS certificate and private key, and writes them to the specified files. The certificate is valid for 365 days and uses the SHA-256 message digest algorithm to sign it. The private key is 4096 bits long and is not encrypted. The certificate is intended to be used for the domain mhaddaou.42.fr.<br>
