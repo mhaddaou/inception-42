@@ -54,7 +54,7 @@ services:
       - my_network
     ports:
       - 6379:6379
-    restart: on-failure
+    restart: unless-stopped
 
   wordpress:
     build:
@@ -86,7 +86,7 @@ services:
     networks:
       - my_network
     volumes:
-      - wordpress_data:/var/www/wordpress
+      - wordpress_data:/var/www/wordpress:rw
     restart: unless-stopped
 
   adminer:
@@ -99,7 +99,7 @@ services:
       - "8080:8080"
     depends_on:
       - mariadb
-    restart: on-failure
+    restart: unless-stopped
     
   website:
     build: ./requirements/bonus/website
@@ -109,7 +109,7 @@ services:
       - my_network
     ports:
       - 81:81
-    restart: on-failure
+    restart: unless-stopped
 
   cadvisor:
     build: ./requirements/bonus/cadvisor
@@ -126,4 +126,4 @@ services:
       - "/var/lib/docker/:/var/lib/docker:ro"
       - "/dev/kmsg:/dev/kmsg"
     privileged: true
-    restart: on-failure
+    restart: unless-stopped
