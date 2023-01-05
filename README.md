@@ -181,10 +181,10 @@ sudo usermod -aG docker $USER
 ```
 3. Log out and log back in to apply the changes to your user.<br>
 # Before Run This Container we need to edit some files  
-    ### First file
-    path : /etc/hosts<br>
-    go inside it and down of line => 127.0.0.1  localhost<br>
-    add  this
-    ```console
-    127.0.1.1   yourdomainename.fr
-    ```
+### First file
+path : /etc/hosts<br>
+go inside it and down of line => 127.0.0.1  localhost<br>
+add  this
+```console
+127.0.1.1   yourdomainename.fr
+```
