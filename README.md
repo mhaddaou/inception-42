@@ -204,4 +204,19 @@ this command is make image that called nginx to show this image try
 ```console
 docker images
 ```
-
+Now let's go to start container that have this image
+```console
+docker run -d -p 443:443 nginx
+```
+`-d` means detached<br>
+`-p` port use nginx<br>
+then<br>
+to see container is run and her status is up
+```console
+docker container ls -a
+```
+now go to your browser and write
+```console
+https://yourdomainname.fr
+```
+press enter and then you can see welcome to nginx <br>
