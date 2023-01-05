@@ -179,5 +179,5 @@ sudo groupadd docker
 ```console
 sudo usermod -aG docker $USER
 ```
-3. Log out and log back in to apply the changes to your user.
+3. Log out and log back in to apply the changes to your user.<br>
 #Before Run This Container we need to edit some files  
