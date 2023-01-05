@@ -168,4 +168,15 @@ In this particular example, the directive specifies that only the TLSv1.3 protoc
 `TLSv1.3` is the latest version of the TLS protocol and offers improved security compared to previous versions. It is designed to be more resistant to attacks and provides better performance.<br>
 
 # HOW TO RUN DOCKER WITHOUT SUDO
+To run Docker commands without using sudo, you need to add your user to the docker group. This can be done with the following steps:
 
+1. Create the docker group if it does not exist:
+
+```console
+sudo groupadd docker
+```
+2. Add your user to the docker group:
+```console
+sudo usermod -aG docker $USER
+```
+3. Log out and log back in to apply the changes to your user.
