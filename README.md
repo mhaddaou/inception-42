@@ -157,4 +157,9 @@ then open the file and write inside it<br>
 `listen 443 ssl;` tells the web server to listen on port 443 for HTTPS requests using SSL/TLS. This is the default port for HTTPS traffic.<br>
 `[::]:443` syntax specifies that the web server should listen on all available IPv6 addresses on port 443. This is equivalent to specifying 0.0.0.0:443 for IPv4 addresses.<br>
 `server_name` directive is used to specify the names of the virtual servers that the Nginx web server should listen to. It is usually included in the configuration file of a virtual host.<br>
-the directive specifies that the virtual server should listen to requests for the domain `mhaddaou.42.fr` and its subdomain `www.mhaddaou.42.fr`
+the directive specifies that the virtual server should listen to requests for the domain `mhaddaou.42.fr` and its subdomain `www.mhaddaou.42.fr`<br>
+`ssl_certificate` should be your primary certificate combined with the intermediate certificate that you made in the previous step (e.g., your_domain_name.crt).<br>
+
+`ssl_certificate_key` should be the .key file generated when you created the CSR.
+
+
