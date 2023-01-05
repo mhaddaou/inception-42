@@ -220,3 +220,12 @@ now go to your browser and write
 https://yourdomainname.fr
 ```
 press enter and then you can see welcome to nginx <br>
+
+to stop this container write
+```console
+docker stop id_container
+```
+to remove all images write
+```console
+docker system prune -a
+```
