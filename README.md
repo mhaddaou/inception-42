@@ -190,7 +190,7 @@ add  this
 ```
 ### Second File
 path : /etc/hostname<br>
-chane your hostname to your domain name<br>
+change your hostname to your domain name<br>
 this command will change your hostname<br>
 ```console
 sudo hostname yourdomainname.fr
