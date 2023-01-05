@@ -195,3 +195,13 @@ this command will change your hostname<br>
 ```console
 sudo hostname yourdomainname.fr
 ```
+# now we are ready to build this image
+first thing go to this site and go to step 4 to know arguments this command
+```console
+docker build -t nginx .
+```
+this command is make image that called nginx to show this image try
+```console
+docker images
+```
+
