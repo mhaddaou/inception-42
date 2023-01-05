@@ -189,7 +189,7 @@ add  this
 127.0.1.1   yourdomainename.fr
 ```
 ### Second File
-path : /etc/hostname
+path : /etc/hostname<br>
 chane your hostname to your domain name<br>
 this command will change your hostname<br>
 ```console
