@@ -160,7 +160,7 @@ then open the file and write inside it<br>
 the directive specifies that the virtual server should listen to requests for the domain `mhaddaou.42.fr` and its subdomain `www.mhaddaou.42.fr`<br>
 `ssl_certificate` should be your primary certificate combined with the intermediate certificate that you made in the previous step (e.g., your_domain_name.crt).<br>
 
-`ssl_certificate_key` should be the .key file generated when you created the CSR.
+`ssl_certificate_key` should be the .key file generated when you created the CSR.<br>
 `ssl_protocols` directive is used to specify which SSL/TLS protocol versions should be enabled on a virtual host in Nginx. SSL/TLS is a security protocol that is used to encrypt data transmitted between a client and a server.<br>
 
 In this particular example, the directive specifies that only the TLSv1.3 protocol should be enabled. TLS (Transport Layer Security) is a successor to the SSL (Secure Sockets Layer) protocol and is used to secure the transmission of data on the internet.<br>
