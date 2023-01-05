@@ -167,4 +167,5 @@ In this particular example, the directive specifies that only the TLSv1.3 protoc
 
 `TLSv1.3` is the latest version of the TLS protocol and offers improved security compared to previous versions. It is designed to be more resistant to attacks and provides better performance.<br>
 
+# HOW TO RUN DOCKER WITHOUT SUDO
 
