@@ -225,6 +225,10 @@ to stop this container write
 ```console
 docker stop id_container
 ```
+to start any container write
+```console
+docker start id_container
+```
 to remove all images write
 ```console
 docker system prune -a
